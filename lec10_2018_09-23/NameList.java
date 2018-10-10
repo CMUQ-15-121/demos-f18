@@ -15,6 +15,9 @@ public class NameList {
         names = new ArrayList<Name>();
 
         Scanner inpFile = getFileScanner(filename);
+        if (inpFile == null) {
+            return;
+        }
 
         while (inpFile.hasNextLine()) {
             String line = inpFile.nextLine();
